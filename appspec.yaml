@@ -3,6 +3,7 @@ os: linux
 files:
   - source: /
     destination: /usr/share/nginx/html
+    overwrite: true
 hooks:
   BeforeInstall:
     - location: scripts/BeforeInstallHook.sh
@@ -10,4 +11,3 @@ hooks:
   AfterInstall:
     - location: scripts/AfterInstallHook.sh
       timeout: 300
-    
